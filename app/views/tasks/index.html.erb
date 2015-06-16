@@ -1,6 +1,6 @@
 <h1>Liste des tâches</h1>
 <p>
-  <%= link_to "Créer une nouvelle tâche", create_path %>
+  <%= link_to "Créer une nouvelle tâche", new_task_path %>
 </p>
 
 <% @tasks.each do |task| %>
@@ -13,8 +13,8 @@
      %>
   </h2>
   <%= link_to "Détails", task_path(task) %>
-  <%= link_to "Editer", edit_path(task) %>
-  <%= link_to "Supprimer", delete_path(task),
+  <%= link_to "Editer", edit_task_path(task) %>
+  <%= link_to "Supprimer", task_path(task),
     method: :delete,
     data: {confirm: "Es-tu certain?"}
   %>
