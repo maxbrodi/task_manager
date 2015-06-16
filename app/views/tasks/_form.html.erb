@@ -1,0 +1,20 @@
+
+<!--   <label for="name">Tâche: </label>
+  <input type="text" name="task[name]" id="name">
+
+  <input type="hidden" name="task[done]" id="done" value=false>
+
+  <input type="submit">
+<!-- </form> -->
+
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<!-- </form> -->
+<% end %>
+
+<br>
+<%= link_to "Retour", tasks_path %>
