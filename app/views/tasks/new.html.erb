@@ -1,0 +1,16 @@
+<h1>Ajoute une nouvelle tâche !</h1>
+<br>
+<!--
+<form action="/tasks" method="post"> -->
+<%= form_for(@task) do |f| %>
+  <label for="name">Tâche: </label>
+  <input type="text" name="task[name]" id="name">
+
+  <input type="hidden" name="task[done]" id="done" value=false>
+
+  <input type="submit">
+<!-- </form> -->
+<% end %>
+
+<br>
+<%= link_to "Retour", tasks_path %>

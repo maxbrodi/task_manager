@@ -1,0 +1,14 @@
+<h1>Tache n°<%= @task.id %></h1>
+
+<h2><%= @task.name + " " +
+  if @task.done
+    "- Déjà effectuée"
+  else
+    "- A faire !"
+  end
+   %>
+</h2>
+
+<p>Créée le <%= @task.created_at.strftime("%d/%m/%y") + " à " + @task.created_at.strftime("%Hh%M") %></p>
+
+<%= link_to "Retour", tasks_path %>
